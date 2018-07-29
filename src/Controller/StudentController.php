@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Controller;
-use App\Entity\Student;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use App\Repository\StudentRepository;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -10,16 +10,17 @@ use Symfony\Component\HttpFoundation\Response;
 class StudentController extends Controller
 {
     /**
-     * @Route("/student", name="student_show")
+     * @Route("/student/list", name="student_list")
      */
 
-    public function showAction()
+    public function listAction()
     {
-        $student = new Student(1, 'bo', 'king');
-        
-        $template = 'student/show.html.twig';
+        $studentRepository = new StudentRepository();
+        $students = $studentRepository->findAll;
+
+        $template = 'student/list.html.twig';
         $arg = [
-            'student' => $student
+            'students' => $students
         ];
         return $this->render($template, $arg);
 
