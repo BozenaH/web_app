@@ -1,4 +1,4 @@
-{% extends 'base.html.twig.html' %}
+{% extends 'base.html.twig' %}
 
 {% block body %}
     <h1>Student LIST page</h1>
@@ -10,6 +10,7 @@
                 <br>
                 name = {{ student.firstName }} {{ student.surname }}
             </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+
 use App\Repository\StudentRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -16,7 +17,7 @@ class StudentController extends Controller
     public function listAction()
     {
         $studentRepository = new StudentRepository();
-        $students = $studentRepository->findAll;
+        $students = $studentRepository->findAll();
 
         $template = 'student/list.html.twig';
         $arg = [
