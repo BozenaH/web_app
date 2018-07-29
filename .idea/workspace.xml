@@ -2,90 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0123d87-7246-472a-8f23-baccb28c0817" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/web_app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/dev/twig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/.php_cs.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/phpunit.xml.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Command/FixRecipesCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Command/GenerateIdCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Command/RemoveCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Command/RequireCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Command/UnpackCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Command/UpdateCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/ComposerRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Configurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Configurator/AbstractConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Configurator/BundlesConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Configurator/ComposerScriptsConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Configurator/ContainerConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Configurator/CopyFromPackageConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Configurator/CopyFromRecipeConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Configurator/EnvConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Configurator/GitignoreConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Configurator/MakefileConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/CurlDownloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Downloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Flex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Lock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Options.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/PackageResolver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/ParallelDownloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Path.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Recipe.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Response.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/ScriptExecutor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/SymfonyBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/TruncatedComposerRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Unpack/Operation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Unpack/Result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/src/Unpacker.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Configurator/BundlesConfiguratorTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Configurator/ContainerConfiguratorTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Configurator/CopyDirectoryFromPackageConfiguratorTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Configurator/CopyFromPackageConfiguratorTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Configurator/CopyFromRecipeConfiguratorTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Configurator/EnvConfiguratorTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Configurator/GitignoreConfiguratorTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Configurator/MakefileConfiguratorTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Configurator/TmpDirMock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Fixtures/phpunit.xml.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Fixtures/vendor/doctrine/doctrine-cache-bundle/DoctrineCacheBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Fixtures/vendor/easycorp/easy-deploy-bundle/src/EasyDeployBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Fixtures/vendor/easycorp/easy-security-bundle/EasySecurityBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Fixtures/vendor/eightpoints/guzzle-bundle/EightPoints/Bundle/GuzzleBundle/GuzzleBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Fixtures/vendor/symfony-cmf/routing-bundle/CmfRoutingBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Fixtures/vendor/symfony/debug-bundle/DebugBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/Fixtures/vendor/web-token/jwt-bundle/JoseFrameworkBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/FlexTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/PackageResolverTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/PathTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_app/vendor/symfony/flex/tests/SymfonyBundleTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web_app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,7 +21,27 @@
     <pharConfigPath>C:\Users\bozena_kwiatkowska\web_app\composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="console" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/console">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-181" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/DefaultController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+              <folding>
+                <element signature="e#34#81#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,8 +49,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/config/routes.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -166,10 +109,11 @@
       <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="373" />
+    <option name="x" value="-16" />
     <option name="y" value="5" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
@@ -191,11 +135,6 @@
             <path>
               <item name="web_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="web_app" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_app" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -208,6 +147,11 @@
               <item name="web_app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_app" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -248,28 +192,28 @@
       <workItem from="1532778554287" duration="670000" />
       <workItem from="1532779419734" duration="4895000" />
       <workItem from="1532793356324" duration="151000" />
-      <workItem from="1532811308565" duration="4085000" />
+      <workItem from="1532811308565" duration="4532000" />
+      <workItem from="1532849277464" duration="1545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9801000" />
+    <option name="totallyTimeSpent" value="11793000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="373" y="5" width="1400" height="1000" extended-state="0" />
+    <frame x="-16" y="5" width="1400" height="1000" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32946634" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32946634" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32946634" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -278,6 +222,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
+      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,16 +238,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="e#35#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/DefaultController.php" />
     <entry file="file://$PROJECT_DIR$/config/services.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -312,13 +249,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/DefaultController.php" />
     <entry file="file://$PROJECT_DIR$/src/Controller/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -352,11 +283,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/console">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="255">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding>
-            <element signature="e#35#82#0#PHP" expanded="true" />
+            <element signature="e#34#81#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
