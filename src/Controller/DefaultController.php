@@ -13,6 +13,8 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return new Response('Hello there');
+        $template = 'default/homepage.html.twig';
+        $args = [];
+        return $this->render($template, $args);
     }
 }
