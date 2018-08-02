@@ -3,30 +3,39 @@
 namespace App\Repository;
 
 use App\Entity\Student;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 
-class StudentRepository
+class StudentRepository extends ServiceEntityRepository
 {
+    public function __construct(RegistryInterface $registry)
+    {
+        parent::__construct($registry, Student::class);
+    }
+}
+/**
     private $students = [];
-    public function __construct()
+
     {
         $id = 1;
-        $s1 = new Student($id, 'bo', 'smith');
+        $s1 = new Student($id, 'matt', 'smith');
         $this->students[$id] = $s1;
 
         $id = 2;
-        $s2 = new Student($id, 'ba', 'will');
+        $s2 = new Student($id, 'joelle', 'murphy');
         $this->students[$id] = $s2;
 
         $id = 3;
-        $s3 = new Student($id, 'ann', 'book');
+        $s3 = new Student($id, 'frances', 'mcguinness');
         $this->students[$id] = $s3;
     }
-
-    /**
-     * @return array
-     */
     public function findAll()
     {
-        return $this->students;
+    return $this->students;
     }
+
 }
+
+
+
+

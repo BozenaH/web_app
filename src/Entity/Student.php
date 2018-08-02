@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Student
 {
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -62,4 +63,8 @@ class Student
     {
         $this->surname = $surname;
     }
+
+
 }
+
+
