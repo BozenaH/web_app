@@ -33,6 +33,18 @@ class Student
     private $surname;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    private $UserName;
+
+    /**
+     * @return mixed
+     */
+    public function getUserName()
+    {
+        return $this->UserName;
+    }
+    /**
      * @return mixed
      */
     public function getFirstName()
@@ -47,8 +59,15 @@ class Student
     {
         $this->firstName = $firstName;
     }
-
     /**
+     * @param mixed $UserName
+     */
+    public function setUserName($UserName)
+    {
+        $this->UserName = $UserName;
+    }
+    /**
+     * @return mixed
      * @return mixed
      */
     public function getSurname()

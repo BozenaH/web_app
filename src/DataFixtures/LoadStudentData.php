@@ -15,11 +15,14 @@ class LoadStudentData extends Fixture
         {
             $firstName = $faker->firstNameMale;
             $surname = $faker->lastName;
+            //$username = $faker->userName;
             $student = new Student();
             $student->setFirstName($firstName);
             $student->setSurname($surname);
+           // $student->setUserName($username);
             $manager->persist($student);
         }
+
 
         $manager->flush();
 
