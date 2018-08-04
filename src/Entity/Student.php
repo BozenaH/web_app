@@ -83,6 +83,14 @@ class Student
         $this->surname = $surname;
     }
 
+    public function createAction($student)
+    {
+    $em = $this->getDoctrine()->getManager();
+    $em->persist($student);
+    $em->flush();
+    return $this->listAction($student->getId());
+    }
+
 
 }
 
