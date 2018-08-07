@@ -52,6 +52,10 @@ class Course
     {
         return $this->description;
     }
+    public function getImage()
+    {
+        return $this->image;
+    }
     public function getPrice()
     {
         return $this->price;
@@ -68,7 +72,11 @@ class Course
     {
         $this->description=$description;
     }
-    public function setPrice($price)
+    public function setImage($image)
+    {
+        $this->image=$image;
+    }
+        public function setPrice($price)
     {
         $this->price=$price;
     }
