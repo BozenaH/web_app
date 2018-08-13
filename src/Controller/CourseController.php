@@ -24,6 +24,14 @@ class CourseController extends Controller
     }
 
     /**
+     * @Route("/list", name="course_list", methods="GET")
+     */
+    public function list(CourseRepository $courseRepository): Response
+    {
+        return $this->render('course/list.html.twig', ['courses' => $courseRepository->findAll()]);
+    }
+
+    /**
      * @Route("/new", name="course_new", methods="GET|POST")
      */
     public function new(Request $request): Response
