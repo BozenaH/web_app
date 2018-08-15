@@ -30,6 +30,7 @@ class AppFixtures extends Fixture
         $user1->setCreditBalance(100);
         $user1->setPaidCourses('This is Java');
         $user1->setNotes('i have paid 15 euro for this course');
+        $user1->setRoles(array('ROLE_USER'));
         $user1->setPassword(
             $this->passwordEncoder->encodePassword(
                 $user1,
@@ -43,6 +44,7 @@ class AppFixtures extends Fixture
         $user2->setCreditBalance(90);
         $user2->setPaidCourses('This is Html');
         $user2->setNotes('i have paid 10 euro for this course');
+        $user2->setRoles(array('ROLE_USER'));
         $user2->setPassword(
             $this->passwordEncoder->encodePassword(
                 $user2,
@@ -56,6 +58,7 @@ class AppFixtures extends Fixture
         $user3->setCreditBalance(85);
         $user3->setPaidCourses('This is sql');
         $user3->setNotes('i have paid 15 euro for this course');
+        $user3->setRoles(array('ROLE_USER'));
         $user3->setPassword(
             $this->passwordEncoder->encodePassword(
                 $user3,
@@ -69,6 +72,7 @@ class AppFixtures extends Fixture
         $user4->setCreditBalance(0);
         $user4->setPaidCourses(0);
         $user4->setNotes('none');
+        $user4->setRoles(array('ROLE_ADMIN'));
         $user4->setPassword(
             $this->passwordEncoder->encodePassword(
                 $user4,
@@ -82,6 +86,7 @@ class AppFixtures extends Fixture
         $user5->setCreditBalance(0);
         $user5->setPaidCourses(0);
         $user5->setNotes('none');
+        $user5->setRoles(array('ROLE_SUPER_ADMIN'));
         $user5->setPassword(
             $this->passwordEncoder->encodePassword(
                 $user5,

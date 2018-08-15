@@ -10,6 +10,9 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class User implements UserInterface, \Serializable
 {
+    const ROLE_USER = 'ROLE_USER';
+    const ROLE_ADMIN = 'ROLE_ADMIN';
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -146,9 +149,10 @@ class User implements UserInterface, \Serializable
     public function getRoles()
     {
         $roles = $this->roles;
+        //$roles[] = 'ROLE_USER';
         // ensure always contains ROLE_USER
-          // $roles[] = 'ROLE_USER';
         return $roles;
+
     }
         /**
         * setter method
