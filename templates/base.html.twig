@@ -11,7 +11,7 @@
         {% endif %}
 
         {% if is_granted('ROLE_ADMIN') %}
-            <a href="{{ url('course_index') }}">staff home</a>
+            <a href="{{ url('course_list') }}">staff home</a>
             Username: <strong>{{ app.user.username }}</strong>
             <br>
             <a href="{{ url('logout') }}">logout</a> <br>
@@ -21,10 +21,14 @@
         <br>
 
         {% if is_granted('ROLE_USER') %}
-        <a href="{{ url('user_index') }}">user home</a>
+
+           <a href="{{ url('homepage') }}">My account</a>
+
+
         Username: <strong>{{ app.user.username }}</strong>
             <br>
-            <a href="{{ url('logout') }}">logout</a> <br>
+            <a href="{{ url('logout') }}">logout</a>
+            <br>
         {% endif %}
 
 {% else %}

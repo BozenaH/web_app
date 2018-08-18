@@ -7,14 +7,14 @@
 
     <table class="table">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>Price</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for course in courses %}
@@ -25,8 +25,9 @@
                 <td>{{ course.image }}</td>
                 <td>{{ course.price }}</td>
                 <td>
-                    <a href="{{ path('course_show', {'id': course.id}) }}">show</a>
-                    <a href="{{ path('course_edit', {'id': course.id}) }}">edit</a>
+
+                    <a href="{{ path('basket_add', { 'id': course.id }) }}">add to basket</a>
+
                 </td>
             </tr>
         {% else %}
@@ -37,5 +38,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('course_new') }}">Create new</a>
+    <a href="{{ path('homepage') }}">back to home</a>
+
 {% endblock %}

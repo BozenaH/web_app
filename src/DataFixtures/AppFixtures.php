@@ -105,24 +105,31 @@ class AppFixtures extends Fixture
         $course1 = new Course();
         $course1->setTitle('This is Java');
         $course1->setDescription('this course is for beginners. you will learn java from basis');
-        $course1->setImage('.pgp');
+        $course1->setImage('Java.png');
         $course1->setPrice(15);
 
         $course2 = new Course();
         $course2->setTitle('This is Html');
         $course2->setDescription('this course is for beginners. you will learn Html from basis');
-        $course2->setImage('.pgp');
+        $course2->setImage('html.png');
         $course2->setPrice(10);
 
         $course3 = new Course();
         $course3->setTitle('This is Sql');
         $course3->setDescription('this course is for beginners. you will learn Sql from basis');
-        $course3->setImage('.pgp');
+        $course3->setImage('sql.png');
         $course3->setPrice(15);
+
+        $course4 = new Course();
+        $course4->setTitle('This is Python');
+        $course4->setDescription('this course is for beginners. you will learn Python from basis');
+        $course4->setImage('python.png');
+        $course4->setPrice(10);
 
         $manager->persist($course1);
         $manager->persist($course2);
         $manager->persist($course3);
+        $manager->persist($course4);
         $manager->flush();
     }
 }

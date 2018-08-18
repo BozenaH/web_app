@@ -17,4 +17,5 @@ class DefaultController extends Controller
         $args = [];
         return $this->render($template, $args);
     }
+
 }
