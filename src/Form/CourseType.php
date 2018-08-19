@@ -6,6 +6,7 @@ use App\Entity\Course;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class CourseType extends AbstractType
 {
@@ -14,7 +15,7 @@ class CourseType extends AbstractType
         $builder
             ->add('title')
             ->add('description')
-            ->add('image')
+            ->add('image', filetype::class, array('data_class' => null,'label'=>'image(png,jpeg)'))
             ->add('price')
         ;
     }

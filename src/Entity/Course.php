@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -27,15 +28,18 @@ class Course
      * @ORM\Column(type="text")
      */
     private $description;
+
     /**
-     * @return mixed
-     * @ORM\Column(type="string")
-     */
+    *@ORM\Column(type="string")
+    * @Assert\NotBlank(message="Please, upload the product image as a png/jpeg file.")
+    * @Assert\File(mimeTypes={ "image/png", "image/jpeg" })
+    */
     private $image;
+
     /**
-     * @return mixed
-     * @ORM\Column(type="float")
-     */
+    * @return mixed
+    * @ORM\Column(type="float")
+    */
     private $price;
 
 
@@ -74,13 +78,17 @@ class Course
     }
     public function setImage($image)
     {
-        $this->image=$image;
+        $this->image = $image;
+
+        return $this;
     }
         public function setPrice($price)
     {
         $this->price=$price;
     }
-
-
+    public function __toString()
+    {
+        return $this->id . ': ' . $this->getImage();
+    }
 
 }

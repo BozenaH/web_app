@@ -15,8 +15,13 @@ class BasketController extends Controller
      * @Route("/", name="basket_index")
      */
     public function index()
+
     {
-        return $this->render('basket/index.html.twig', [
+        if(!$this->isGranted('ROLE_USER'))
+            return $this->redirectToRoute('login');
+
+        else
+        return $this->render('basket/addCourse', [
             'controller_name' => 'BasketController',
         ]);
     }
