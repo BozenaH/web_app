@@ -22,8 +22,7 @@
 
         {% if is_granted('ROLE_USER') %}
 
-           <a href="{{ url('homepage') }}">My account</a>
-
+           <a href="{{ url('user_account',{'id': app.user.id}) }}">My account</a>
 
         Username: <strong>{{ app.user.username }}</strong>
             <br>

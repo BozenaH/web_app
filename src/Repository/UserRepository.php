@@ -21,6 +21,14 @@ class UserRepository extends ServiceEntityRepository
         parent::__construct($registry, User::class);
     }
 
+    public function findUser($id)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                "SELECT u FROM App:User u WHERE u.id is '$id'"
+            )
+            ->getResult();
+    }
 
 
 

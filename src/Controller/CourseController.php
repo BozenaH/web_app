@@ -96,15 +96,15 @@ class CourseController extends Controller
         if ($form->isSubmitted() && $form->isValid())
         {
             // $file stores the uploaded PNG file
-            $this->getDoctrine()->getManager()->flush();
+            //$this->getDoctrine()->getManager()->flush();
             $file = $course->getImage();
             $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
 
             // moves the file to the directory where brochures are stored
             $file->move($this->getParameter('image_directory'), $fileName);
             $course->setImage(
-              new File($this->getParameter('image_directory').'/'.$course->getImage())
-              );
+              new File($this->getParameter($course->getImage()))
+            );
             $course->setImage($fileName);
             $em = $this->getDoctrine()->getManager();
             $em->persist($course);

@@ -126,10 +126,17 @@ class AppFixtures extends Fixture
         $course4->setImage('python.png');
         $course4->setPrice(10);
 
+        $course5 = new Course();
+        $course5->setTitle('This is Test');
+        $course5->setDescription('this course is for beginners. you will learn how to test');
+        $course5->setImage('python.png');
+        $course5->setPrice(10);
+
         $manager->persist($course1);
         $manager->persist($course2);
         $manager->persist($course3);
         $manager->persist($course4);
+        $manager->persist($course5);
         $manager->flush();
     }
 }

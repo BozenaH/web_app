@@ -1,6 +1,4 @@
-{% extends 'base.html.twig' %}
-
-{% if is_granted('ROLE_USER') %}
+{% extends 'base.html.twig.' %}
 
 {% block title %}User{% endblock %}
 
@@ -9,20 +7,13 @@
 
     <table class="table">
         <tbody>
-
-        <tr>
+        {#<tr>
+            <th>Id</th>
             <td>{{ user.id }}</td>
-            <td>{{ user.name }}</td>
-            <td>
-
-            <a href="{{ path('user_show', {'id':user.id}) }}">show</a>
-
-            </td>
-        </tr>
-
+        </tr>#}
         <tr>
-            <th>Password</th>
-            <td>{{ user.password }}</td>
+            <th>Username</th>
+            <td>{{ user.username }}</td>
         </tr>
         <tr>
             <th>Email</th>
@@ -40,13 +31,19 @@
             <th>Notes</th>
             <td>{{ user.notes }}</td>
         </tr>
+        <tr>
+            <th>CreditBalance</th>
+            <td>{{ user.creditBalance }}</td>
+        </tr>
 
         </tbody>
     </table>
+    <br>
 
-    <a href="{{ path('user_index') }}">back to list</a>
-
-    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+    <button class="btn">
+    <a href="{{ path('user_edit_account', {'id': user.id}) }}">Edit</a>
+    </button>
+    <br><br>
 
     {{ include('user/_delete_form.html.twig') }}
 

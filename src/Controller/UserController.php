@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-
+use Symfony\Component\Security\Csrf\TokenStorage\TokenStorageInterface;
 
 /**
  * @Route("/user")
@@ -91,7 +91,32 @@ class UserController extends Controller
         return $this->redirectToRoute('user_index');
     }
 
+    /**
+     * @Route("/account/{id}", name="user_account", methods="GET")
+     */
+    public function showAccount(User $user): Response
+    {
+        return $this->render('user/account.html.twig', ['user' => $user]);
+    }
 
+    /**
+     * @Route("/account/{id}/edit", name="user_edit_account", methods="GET|POST")
+     */
+    public function editAccount(Request $request, User $user): Response
+    {
+        $form = $this->createForm(UserType::class, $user);
+        $form->handleRequest($request);
 
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('user_edit_account', ['id' => $user->getId()]);
+        }
+
+        return $this->render('user/editAccount.html.twig', [
+            'user' => $user,
+            'form' => $form->createView(),
+        ]);
+    }
 
 }
