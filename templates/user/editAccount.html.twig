@@ -5,12 +5,19 @@
 {% block body %}
     <h1>Edit User</h1>
 
+  {#  {{ form_start(form) }}
+        {{ form_row(form.username) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.fullName) }}
+        {{ form_row(form.paidCourses ) }}
+        {{ form_row(form.notes) }}
+    {{ form_end(form) }}#}
 
-    {{ include('user/account_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
 
     <br>
     <button class="btn">
-    <a href="{{ path('user_account',{'id':user.id}) }}">Go Back</a>
+    <a href="{{ path('user_account',{'id':app.user.id}) }}">Go Back</a>
     </button>
     <br><br>
     {{ include('user/_delete_form.html.twig') }}

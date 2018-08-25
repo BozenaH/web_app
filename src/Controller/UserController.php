@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Form\AccountType;
 use App\Form\UserType;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -101,22 +102,26 @@ class UserController extends Controller
 
     /**
      * @Route("/account/{id}/edit", name="user_edit_account", methods="GET|POST")
+     *
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     * @Security("has_role('ROLE_USER')")
      */
     public function editAccount(Request $request, User $user): Response
     {
+
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+         $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('user_edit_account', ['id' => $user->getId()]);
-        }
+           return $this->redirectToRoute('user_edit_account', ['id' => $user->getId()]);
+       }
 
         return $this->render('user/editAccount.html.twig', [
             'user' => $user,
             'form' => $form->createView(),
         ]);
     }
-
-}
+    }

@@ -10,6 +10,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+
 class AccountType extends AbstractType
 
 
@@ -23,7 +24,6 @@ class AccountType extends AbstractType
         $builder
 
             ->add('username')
-            ->add('password')
             ->add('email')
             ->add('fullName')
             ->add('paidCourses')
@@ -36,7 +36,8 @@ class AccountType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => User::class,
+            'data_class' => AccountType::class
+
         ]);
     }
 }

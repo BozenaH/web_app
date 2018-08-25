@@ -111,7 +111,7 @@ class ScriptExecutor
     {
         $phpFinder = new PhpExecutableFinder();
         if (!$php = $phpFinder->find(false)) {
-            throw new \RuntimeException('The PHP executable could not be found, add it to your PATH and try again.');
+            throw new \RuntimeException('The PHP executable could not be found, add.html.twig it to your PATH and try again.');
         }
 
         $arguments = $phpFinder->findArguments();

@@ -21,7 +21,7 @@ class BasketController extends Controller
             return $this->redirectToRoute('login');
 
         else
-        return $this->render('basket/addCourse', [
+        return $this->render('basket/index.html.twig', [
             'controller_name' => 'BasketController',
         ]);
     }
@@ -45,14 +45,14 @@ class BasketController extends Controller
         // default - new empty array
         $courses =[];
 
-        // if 'products' array in session, retrieve and store in $products
+        // if 'products' array in session, retrieve and store in $basket
         $session = new Session();
         if ($session->has('basket')){
             $courses = $session->get('basket');
         }
         // get ID of the course
         $id = $course->getId();
-        // only try to add to array if not already in the array
+        // only try to add.html.twig to array if not already in the array
         if (!array_key_exists($id,$courses)) {
             // append $product to our list
             $courses[$id] = $course;
@@ -80,7 +80,7 @@ class BasketController extends Controller
         // get ID of the course
         $id = $courses->getId();
 
-        // only try to add to array if not already in the array
+        // only try to add.html.twig to array if not already in the array
         if (array_key_exists($id, $courses))
         {
             // remove entry with $id

@@ -26,7 +26,7 @@
                 <td>{{ course.price }}</td>
                 <td>
                     <button class="btn">
-                    <a href="{{ path('basket_add', { 'id': course.id }) }}" >Add to basket</a>
+                    <a href="{{ path('basket/add/{id}', { 'id': course.id }) }}" >Add to basket</a>
                     </button>
                 </td>
             </tr>
