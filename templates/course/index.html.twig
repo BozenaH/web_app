@@ -25,9 +25,9 @@
                 <td><img src="/images/{{ course.image }}"></td>
                 <td>{{ course.price }}</td>
                 <td>
-
-                    <a href="{{ path('basket_add', { 'id': course.id }) }}" class="btn btn-success">add to basket</a>
-
+                    <button class="btn">
+                    <a href="{{ path('basket_add', { 'id': course.id }) }}" >Add to basket</a>
+                    </button>
                 </td>
             </tr>
         {% else %}
@@ -37,7 +37,7 @@
         {% endfor %}
         </tbody>
     </table>
-
+    <button class="btn">
     <a href="{{ path('homepage') }}">back to home</a>
-
+    </button>
 {% endblock %}
