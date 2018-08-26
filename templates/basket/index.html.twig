@@ -12,7 +12,9 @@
                 <li>
                     <hr>
                     {{ course.id }} :: {{ course.description }}
-                <a href="{{ path('basket_delete',{ 'id': course.id }) }}">(remove)</a>
+                    <td>{{ course.price }}</td>
+
+                        <a href="{{ path('basket_delete',{ 'id': course.id }) }}">(remove)</a>
                 </li>
             {% endfor %}
         </ul>
@@ -26,7 +28,7 @@
 
 
 
-
+{#
 
 {% block body %}
 <style>
@@ -43,4 +45,4 @@
         <li>Your template at <code><a href="{{ 'templates/basket/index.html.twig'|file_link(0) }}">templates/basket/index.html.twig</a></code></li>
     </ul>
 </div>
-{% endblock %}
+{% endblock %} #}

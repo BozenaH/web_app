@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 
 /**
@@ -90,5 +92,11 @@ class Course
     {
         return $this->id . ': ' . $this->getImage();
     }
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Basket", inversedBy="courses")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $basket;
+
 
 }
