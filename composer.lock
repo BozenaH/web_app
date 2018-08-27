@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cdd73fd7084b9da762d904615f5105cf",
+    "content-hash": "93582fd1ff46c6a1cbd99ab06c76c0ca",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -3033,16 +3033,16 @@
         },
         {
             "name": "symfony/maker-bundle",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "bb0485a3b2eecc561eff735109316677e18fb1d1"
+                "reference": "a1b0d9ff35219ec36c44fcc6213056cc339a1cf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/bb0485a3b2eecc561eff735109316677e18fb1d1",
-                "reference": "bb0485a3b2eecc561eff735109316677e18fb1d1",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/a1b0d9ff35219ec36c44fcc6213056cc339a1cf8",
+                "reference": "a1b0d9ff35219ec36c44fcc6213056cc339a1cf8",
                 "shasum": ""
             },
             "require": {
@@ -3094,7 +3094,7 @@
                 "scaffold",
                 "scaffolding"
             ],
-            "time": "2018-05-17T19:26:29+00:00"
+            "time": "2018-08-07T16:05:09+00:00"
         },
         {
             "name": "symfony/options-resolver",
@@ -3757,16 +3757,16 @@
         },
         {
             "name": "symfony/twig-bundle",
-            "version": "v4.1.2",
+            "version": "v4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/twig-bundle.git",
-                "reference": "04f9b5055ca8ea1cb2abc247149b0b4ae4bac6da"
+                "reference": "7ad77c4f669d7d5de0032b876b19e2b664003e85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/twig-bundle/zipball/04f9b5055ca8ea1cb2abc247149b0b4ae4bac6da",
-                "reference": "04f9b5055ca8ea1cb2abc247149b0b4ae4bac6da",
+                "url": "https://api.github.com/repos/symfony/twig-bundle/zipball/7ad77c4f669d7d5de0032b876b19e2b664003e85",
+                "reference": "7ad77c4f669d7d5de0032b876b19e2b664003e85",
                 "shasum": ""
             },
             "require": {
@@ -3827,7 +3827,7 @@
             ],
             "description": "Symfony TwigBundle",
             "homepage": "https://symfony.com",
-            "time": "2018-06-25T11:12:43+00:00"
+            "time": "2018-07-26T09:10:45+00:00"
         },
         {
             "name": "symfony/validator",
@@ -4401,16 +4401,16 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v4.1.2",
+            "version": "v4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "ff9ac5d5808a530b2e7f6abcf3a2412d4f9bcd62"
+                "reference": "c55fe9257003b2d95c0211b3f6941e8dfd26dffd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/ff9ac5d5808a530b2e7f6abcf3a2412d4f9bcd62",
-                "reference": "ff9ac5d5808a530b2e7f6abcf3a2412d4f9bcd62",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/c55fe9257003b2d95c0211b3f6941e8dfd26dffd",
+                "reference": "c55fe9257003b2d95c0211b3f6941e8dfd26dffd",
                 "shasum": ""
             },
             "require": {
@@ -4454,20 +4454,20 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "time": "2018-06-04T17:31:56+00:00"
+            "time": "2018-07-26T09:10:45+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v4.1.2",
+            "version": "v4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "03ac71606ecb0b0ce792faa17d74cc32c2949ef4"
+                "reference": "2a4df7618f869b456f9096781e78c57b509d76c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/03ac71606ecb0b0ce792faa17d74cc32c2949ef4",
-                "reference": "03ac71606ecb0b0ce792faa17d74cc32c2949ef4",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/2a4df7618f869b456f9096781e78c57b509d76c7",
+                "reference": "2a4df7618f869b456f9096781e78c57b509d76c7",
                 "shasum": ""
             },
             "require": {
@@ -4507,7 +4507,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-30T07:26:09+00:00"
+            "time": "2018-07-26T09:10:45+00:00"
         },
         {
             "name": "symfony/debug-bundle",
@@ -4849,16 +4849,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v4.1.2",
+            "version": "v4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "b3c53eb42f6527498a1c99cb3051ada7dc6b4225"
+                "reference": "3c30714807f34b7de710cc33eb612cd42cf683b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/b3c53eb42f6527498a1c99cb3051ada7dc6b4225",
-                "reference": "b3c53eb42f6527498a1c99cb3051ada7dc6b4225",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/3c30714807f34b7de710cc33eb612cd42cf683b0",
+                "reference": "3c30714807f34b7de710cc33eb612cd42cf683b0",
                 "shasum": ""
             },
             "require": {
@@ -4911,7 +4911,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2018-07-05T11:54:23+00:00"
+            "time": "2018-07-26T08:55:25+00:00"
         },
         {
             "name": "symfony/polyfill-php72",

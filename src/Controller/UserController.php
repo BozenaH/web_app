@@ -1,5 +1,9 @@
 <?php
 
+/**
+ *
+ * This file is used to manage routes associated with user entity
+ */
 namespace App\Controller;
 
 use App\Entity\User;
@@ -15,6 +19,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\Security\Csrf\TokenStorage\TokenStorageInterface;
 
 /**
+ * class that controls any routes associated with the UserController
  * @Route("/user")
  */
 class UserController extends Controller

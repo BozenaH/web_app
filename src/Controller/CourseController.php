@@ -1,5 +1,9 @@
 <?php
 
+/**
+ *
+ * This file is used to manage routes associated with course entity
+ */
 namespace App\Controller;
 
 use App\Entity\Course;
@@ -14,6 +18,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\File\File;
 
 /**
+ * class that controls any routes associated with the CourseController
  * @Route("/course")
  */
 class CourseController extends Controller

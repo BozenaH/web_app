@@ -5,6 +5,8 @@ use App\Entity\Course;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 /**
  * @Route("/basket")
@@ -13,6 +15,8 @@ class BasketController extends Controller
 {
     /**
      * @Route("/", name="basket_index")
+     * @Method("POST")
+     *  @Security("is_granted('ROLE_USER')")
      */
     public function index()
 
@@ -38,11 +42,13 @@ class BasketController extends Controller
     }
     /**
     * @Route("/add/{id}", name="basket_add")
+     * @Security("is_granted('ROLE_USER')")
     */
 
     public function addToBasket(Course $course)
     {
-        // default - new empty array
+
+            // default - new empty array
         $courses =[];
 
         // if 'products' array in session, retrieve and store in $basket

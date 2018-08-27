@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * File for User entity
+ */
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -7,6 +9,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 
 /**
+ * Class for User entity variables with getter and setter methods
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User implements UserInterface, \Serializable
@@ -15,33 +18,43 @@ class User implements UserInterface, \Serializable
     const ROLE_ADMIN = 'ROLE_ADMIN';
     const ROLE_SUPER_ADMIN = 'ROLE_ADMIN';
     /**
+     * primary key variable
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
     private $id;
 
+    /**
+     * getter method
+     * @return mixed
+     *
+     */
     public function getId()
     {
         return $this->id;
     }
 
     /**
+     * username variable
      * @ORM\Column(type="string", length=50, unique=true)
      */
     private $username;
 
     /**
+     * password variable
      * @ORM\Column(type="string")
      */
     private $password;
 
     /**
+     * email variable
      * @ORM\Column(type="string", length=254, unique=true)
      */
     private $email;
 
     /**
+     * getter method
      * @return mixed
      */
     public function getEmail()
@@ -50,6 +63,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * setter method
      * @param mixed $email
      */
     public function setEmail($email): void
@@ -58,11 +72,13 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * full name variable
      * @ORM\Column(type="string", length=50)
      */
     private $fullName;
 
     /**
+     * getter method
      * @return mixed
      */
     public function getFullName()
@@ -71,6 +87,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * setter method
      * @param mixed $fullName
      */
     public function setFullName($fullName): void
@@ -79,11 +96,13 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * paid courses variable
      * @ORM\Column(type="string", length=50)
      */
     private $paidCourses;
 
     /**
+     * getter method
      * @return mixed
      */
     public function getPaidCourses()
@@ -92,6 +111,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * setter method
      * @param mixed $paidCourses
      */
     public function setPaidCourses($paidCourses): void
@@ -100,11 +120,13 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * notes variable
      * @ORM\Column(type="string", length=50)
      */
     private $notes;
 
     /**
+     * getter method
      * @return mixed
      */
     public function getNotes()
@@ -113,6 +135,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * setter method
      * @param mixed $notes
      */
     public function setNotes($notes): void
@@ -122,11 +145,13 @@ class User implements UserInterface, \Serializable
 
 
     /**
+     * credit balance variable
      * @ORM\Column(type="integer")
      */
     private $creditBalance;
 
     /**
+     * getter method
      * @return mixed
      */
     public function getCreditBalance()
@@ -135,6 +160,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * setter method
      * @param mixed $creditBalance
      */
     public function setCreditBalance($creditBalance): void
@@ -148,6 +174,10 @@ class User implements UserInterface, \Serializable
      */
     private $roles = [];
 
+    /**
+     * getter method
+     * @return array
+     */
     public function getRoles()
     {
         $roles = $this->roles;
@@ -168,22 +198,35 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * * getter method
+     * @return string
+     */
     public function getPassword()
     {
         return $this->password;
     }
 
+    /**
+     * getter method
+     * @return null|string
+     */
     public function getSalt()
     {
         return null; // no salt needed as bcrypt is used
     }
 
+    /**
+     * getter method
+     * @return string
+     */
     public function getUsername()
     {
         return $this->username;
     }
 
     /**
+     * setter method
      * @param mixed $username
      */
     public function setUsername($username): void
@@ -192,6 +235,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * setter method
      * @param mixed $password
      */
     public function setPassword($password): void
@@ -199,11 +243,18 @@ class User implements UserInterface, \Serializable
         $this->password = $password;
     }
 
+    /**
+     * erase credentials method not used here
+     */
     public function eraseCredentials()
     {
 
     }
 
+    /**
+     * special method
+     * @return string
+     */
     public function serialize()
     {
         return serialize([
@@ -214,6 +265,10 @@ class User implements UserInterface, \Serializable
         ]);
     }
 
+    /**
+     * special method for converting to byte-stream
+     * @param string $serialized
+     */
     public function unserialize($serialized)
     {
         list($this->id,

@@ -49,7 +49,7 @@ class Basket
 
     /**
      * constructor method
-     * Category constructor.
+     *
      */
     public function __construct()
     {
