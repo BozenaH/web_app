@@ -22,8 +22,7 @@
             {% for course in basket %}
                 <li>
                     <hr>
-                    {{ course.id }} :: {{ course.description }}
-                    <td>{{ course.price }}</td>
+                    {{ course.id }} :: {{ course.description }} :: {{ course.price }}
 
                         <a href="{{ path('basket_delete',{ 'id': course.id }) }}">(remove)</a>
                 </li>

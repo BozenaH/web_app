@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Project Test Suite" tests="3" assertions="3" errors="0" failures="0" skipped="0" time="18.264142">
-    <testsuite name="App\Tests\Controller\DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="18.263083">
-      <testcase name="testHomepageResponseCodeOkay" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="13" assertions="1" time="18.130867"/>
-      <testcase name="testHomepageContentContainsHelloWorld" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="30" assertions="1" time="0.132216"/>
+  <testsuite name="Project Test Suite" tests="4" assertions="4" errors="0" failures="0" skipped="0" time="4.148254">
+    <testsuite name="App\Tests\Controller\DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" tests="3" assertions="3" errors="0" failures="0" skipped="0" time="4.147176">
+      <testcase name="testHomepageResponseCodeOkay" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="13" assertions="1" time="2.626453"/>
+      <testcase name="testHomepageContentContainsWelcome" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="30" assertions="1" time="0.667450"/>
+      <testcase name="testHomepageHasLinkToLoginPage" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="48" assertions="1" time="0.853273"/>
     </testsuite>
-    <testsuite name="App\Tests\SimpleTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\SimpleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.001059">
-      <testcase name="testOnePlusOneEqualsTwo" class="App\Tests\SimpleTest" classname="App.Tests.SimpleTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\SimpleTest.php" line="13" assertions="1" time="0.001059"/>
+    <testsuite name="App\Tests\SimpleTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\SimpleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.001078">
+      <testcase name="testOnePlusOneEqualsTwo" class="App\Tests\SimpleTest" classname="App.Tests.SimpleTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\SimpleTest.php" line="13" assertions="1" time="0.001078"/>
     </testsuite>
   </testsuite>
 </testsuites>
