@@ -28,7 +28,7 @@ class AppFixtures extends Fixture
         $user1->setFullName('John King');
         $user1->setEmail('john_king@yahoo.com');
         $user1->setCreditBalance(100);
-        $user1->setPaidCourses('This is Java');
+        $user1->setPaidCourses([1]);
         $user1->setNotes('i have paid 15 euro for this course');
         $user1->setRoles(array('ROLE_USER'));
         $user1->setPassword(
@@ -42,7 +42,7 @@ class AppFixtures extends Fixture
         $user2->setFullName('Sarah Hall');
         $user2->setEmail('sarah_hall@yahoo.com');
         $user2->setCreditBalance(90);
-        $user2->setPaidCourses('This is Html');
+        $user2->setPaidCourses([2]);
         $user2->setNotes('i have paid 10 euro for this course');
         $user2->setRoles(array('ROLE_USER'));
         $user2->setPassword(
@@ -56,7 +56,7 @@ class AppFixtures extends Fixture
         $user3->setFullName('Henry Bell');
         $user3->setEmail('Henry_Bell@yahoo.com');
         $user3->setCreditBalance(85);
-        $user3->setPaidCourses('This is sql');
+        $user3->setPaidCourses([3]);
         $user3->setNotes('i have paid 15 euro for this course');
         $user3->setRoles(array('ROLE_USER'));
         $user3->setPassword(
@@ -70,7 +70,7 @@ class AppFixtures extends Fixture
         $user4->setFullName('Tom Cruse');
         $user4->setEmail('Tom_Cruse@yahoo.com');
         $user4->setCreditBalance(0);
-        $user4->setPaidCourses(0);
+        $user4->setPaidCourses([]);
         $user4->setNotes('none');
         $user4->setRoles(array('ROLE_ADMIN'));
         $user4->setPassword(
@@ -84,7 +84,7 @@ class AppFixtures extends Fixture
         $user5->setFullName('Jack Rich');
         $user5->setEmail('Jack_Rich@yahoo.com');
         $user5->setCreditBalance(0);
-        $user5->setPaidCourses(0);
+        $user5->setPaidCourses([]);
         $user5->setNotes('none');
         $user5->setRoles(array('ROLE_SUPER_ADMIN'));
         $user5->setPassword(

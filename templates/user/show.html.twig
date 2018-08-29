@@ -27,10 +27,10 @@
                 <th>FullName</th>
                 <td>{{ user.fullName }}</td>
             </tr>
-            <tr>
+            {#<tr>
                 <th>PaidCourses</th>
-                <td>{{ user.paidCourses }}</td>
-            </tr>
+                <td>{{ user.paidCourses|join(',') }}</td>
+            </tr>#}
             <tr>
                 <th>Notes</th>
                 <td>{{ user.notes }}</td>

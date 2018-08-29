@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
+{% block title %}{% endblock %}
 
 
 {% block body %}
@@ -12,53 +12,40 @@
 
     {% set basket = app.session.get('basket') %}
 
+    {% if error is defined %} {{ error }} {% endif %}
+
 {% if basket is null %}
     <p> You have no electives in your basket </p>
 
-   {# {{ dump(app.session.get('basket')) }}#}
+   {% else %}
 
-    {% else %}
-        <ul>
             {% for course in basket %}
-                <li>
-                    <hr>
-                    {{ course.id }} :: {{ course.description }} :: {{ course.price }}
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ course.id }}</td>
 
-                        <a href="{{ path('basket_delete',{ 'id': course.id }) }}">(remove)</a>
-                </li>
+                    <th>Description</th>
+                    <td>{{ course.description }}</td>
+
+                    <th>Price</th>
+                    <td> {{ course.price }}</td>
+
+                    <th><button class="btn"><a href="{{ path('basket_delete',{ 'id': course.id }) }}">Remove</a>
+                        </button></th>
+                </tr>
             {% endfor %}
-        </ul>
+       </tbody></table>
 {% endif %}
-
         <p>
-            <a href="{{ path('basket_clear') }}">CLEAR all items in basket</a>
+            <button class="btn"><a href="{{ path('course_index') }}">Continue shopping</a></button>
         </p>
-    <br>
         <p>
-            <a href="{{ path('course_index') }}">Continue shopping</a>
+            <button class="btn"><a href="{{ path('basket_clear') }}">Clear all items in basket</a></button>
         </p>
 
+        <p>
+            <button class="btn"><a href="{{ path('basket_buy') }}">BUY</a></button>
+        </p>
     {% endblock %}
-{% endblock %}
-
-
-
-
-{#
-
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'src/Controller/BasketController.php'|file_link(0) }}">src/Controller/BasketController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'templates/basket/index.html.twig'|file_link(0) }}">templates/basket/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %} #}

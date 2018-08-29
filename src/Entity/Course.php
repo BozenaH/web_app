@@ -159,7 +159,6 @@ class Course
      * @ORM\ManyToOne(targetEntity="App\Entity\Basket", inversedBy="courses")
      * @ORM\JoinColumn(nullable=true)
      */
-    private $basket;
 
 
 }

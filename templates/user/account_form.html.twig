@@ -1,13 +1,13 @@
 {{ form_start(form) }}
-
+{#
+    we show the fields individually - we choose form_row instead of form_widget
+    https://symfony.com/doc/current/form/form_customization.html
+    #}
     {{ form_row(form.username) }}
     {{ form_row(form.email) }}
-    {{ form_row(form.password) }}
     {{ form_row(form.fullName) }}
-    {#form_row(form.paidCourses) #}
+    {#{{ form_row(form.paidCourses) }}#}
     {{ form_row(form.notes) }}
-    {{ form_row(form.creditBalance)}}
-    {{ form_row(form.roles)}}
 
     {# we need to add hidden token csrf secure it when we use form_row #}
     {{ form_widget(form._token) }}

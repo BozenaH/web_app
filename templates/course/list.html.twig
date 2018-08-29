@@ -22,11 +22,13 @@
                 <td>{{ course.id }}</td>
                 <td>{{ course.title }}</td>
                 <td>{{ course.description }}</td>
-                <td>{{ course.image }}</td>
+                <td><img src="/images/{{course.image}}" /></td>
                 <td>{{ course.price }}</td>
                 <td>
+                    {% if is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') %}
                     <a href="{{ path('course_show', {'id': course.id}) }}">show</a>
                     <a href="{{ path('course_edit', {'id': course.id}) }}">edit</a>
+                    {% endif %}
                 </td>
             </tr>
         {% else %}
@@ -36,6 +38,8 @@
         {% endfor %}
         </tbody>
     </table>
-
+    {% if is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') %}
     <a href="{{ path('course_new') }}">Create new</a>
+    {% endif %}
+
 {% endblock %}
