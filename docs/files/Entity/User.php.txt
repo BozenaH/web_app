@@ -97,7 +97,7 @@ class User implements UserInterface, \Serializable
 
     /**
      * paid courses variable
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="array")
      */
     private $paidCourses;
 
@@ -116,6 +116,9 @@ class User implements UserInterface, \Serializable
      */
     public function setPaidCourses($paidCourses): void
     {
+        if (count($paidCourses) == 1 && $paidCourses[0] == null) {
+            return;
+        }
         $this->paidCourses = $paidCourses;
     }
 
@@ -165,7 +168,11 @@ class User implements UserInterface, \Serializable
      */
     public function setCreditBalance($creditBalance): void
     {
-        $this->creditBalance = $creditBalance;
+        //we need to ensure creditBalance is not overwritten with null
+        //while the user is being edited and we don't provide credit info
+        if ($creditBalance !== null) {
+            $this->creditBalance = $creditBalance;
+        }
     }
 
     /**
@@ -194,7 +201,12 @@ class User implements UserInterface, \Serializable
      */
     public function setRoles($roles)
     {
-        $this->roles = $roles;
+        //ensure role is not overwritten with null
+        //while we edit user and don't provide this info
+        //so current role is role
+        if (!empty($roles)) {
+            $this->roles = $roles;
+        }
         return $this;
     }
 
@@ -240,7 +252,11 @@ class User implements UserInterface, \Serializable
      */
     public function setPassword($password): void
     {
-        $this->password = $password;
+        // ensure not to overwrite password with null
+        //if password is not null then password is $password
+        if ($password !== null) {
+            $this->password = $password;
+        }
     }
 
     /**
@@ -253,7 +269,7 @@ class User implements UserInterface, \Serializable
 
     /**
      * special method
-     * @return string
+     * @see \Serializable::serialize()
      */
     public function serialize()
     {

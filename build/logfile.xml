@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Project Test Suite" tests="4" assertions="4" errors="0" failures="0" skipped="0" time="4.148254">
-    <testsuite name="App\Tests\Controller\DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" tests="3" assertions="3" errors="0" failures="0" skipped="0" time="4.147176">
-      <testcase name="testHomepageResponseCodeOkay" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="13" assertions="1" time="2.626453"/>
-      <testcase name="testHomepageContentContainsWelcome" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="30" assertions="1" time="0.667450"/>
-      <testcase name="testHomepageHasLinkToLoginPage" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="48" assertions="1" time="0.853273"/>
+  <testsuite name="Project Test Suite" tests="11" assertions="9" errors="2" failures="1" skipped="0" time="10.020371">
+    <testsuite name="App\Tests\Controller\BasketControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\BasketControllerTest.php" tests="1" assertions="1" errors="0" failures="1" skipped="0" time="0.066871">
+      <testcase name="testGetCreditBalanceExpectedException" class="App\Tests\Controller\BasketControllerTest" classname="App.Tests.Controller.BasketControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\BasketControllerTest.php" line="19" assertions="1" time="0.066871">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">App\Tests\Controller\BasketControllerTest::testGetCreditBalanceExpectedException
+Failed asserting that 'To low credit to buy this course' contains "TO LOW CREDIT TO BUY THIS COURSE".
+
+C:\Users\bozena_kwiatkowska\web_app\tests\Controller\BasketControllerTest.php:34
+</failure>
+      </testcase>
     </testsuite>
-    <testsuite name="App\Tests\SimpleTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\SimpleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.001078">
-      <testcase name="testOnePlusOneEqualsTwo" class="App\Tests\SimpleTest" classname="App.Tests.SimpleTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\SimpleTest.php" line="13" assertions="1" time="0.001078"/>
+    <testsuite name="App\Tests\Controller\DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" tests="7" assertions="7" errors="0" failures="0" skipped="0" time="9.467052">
+      <testcase name="testHomepageResponseCodeOkay" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="14" assertions="1" time="4.755202"/>
+      <testcase name="testHomepageContentContainsWelcome" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="31" assertions="1" time="0.617469"/>
+      <testcase name="testHomepageHasLinkToLoginPage" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="49" assertions="1" time="0.825129"/>
+      <testsuite name="App\Tests\Controller\DefaultControllerTest::testPageIsSuccessfulDataProvider" tests="4" assertions="4" errors="0" failures="0" skipped="0" time="3.269252">
+        <testcase name="testPageIsSuccessfulDataProvider with data set #0" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="85" assertions="1" time="0.105293"/>
+        <testcase name="testPageIsSuccessfulDataProvider with data set #1" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="85" assertions="1" time="0.119641"/>
+        <testcase name="testPageIsSuccessfulDataProvider with data set #2" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="85" assertions="1" time="1.622894"/>
+        <testcase name="testPageIsSuccessfulDataProvider with data set #3" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\DefaultControllerTest.php" line="85" assertions="1" time="1.421424"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\Controller\UserControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\UserControllerTest.php" tests="2" assertions="0" errors="2" failures="0" skipped="0" time="0.476979">
+      <testcase name="testUserFormSubmitValidData" class="App\Tests\Controller\UserControllerTest" classname="App.Tests.Controller.UserControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\UserControllerTest.php" line="14" assertions="0" time="0.421750">
+        <error type="InvalidArgumentException">App\Tests\Controller\UserControllerTest::testUserFormSubmitValidData
+InvalidArgumentException: Unreachable field "student1"
+
+C:\Users\bozena_kwiatkowska\web_app\vendor\symfony\dom-crawler\FormFieldRegistry.php:84
+C:\Users\bozena_kwiatkowska\web_app\vendor\symfony\dom-crawler\FormFieldRegistry.php:120
+C:\Users\bozena_kwiatkowska\web_app\vendor\symfony\dom-crawler\Form.php:75
+C:\Users\bozena_kwiatkowska\web_app\vendor\symfony\dom-crawler\Crawler.php:857
+C:\Users\bozena_kwiatkowska\web_app\tests\Controller\UserControllerTest.php:32
+</error>
+      </testcase>
+      <testcase name="testLoginFormSubmitValidData" class="App\Tests\Controller\UserControllerTest" classname="App.Tests.Controller.UserControllerTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\Controller\UserControllerTest.php" line="44" assertions="0" time="0.055229">
+        <error type="PHPUnit\Framework\Error\Notice">App\Tests\Controller\UserControllerTest::testLoginFormSubmitValidData
+Undefined variable: crawler
+
+C:\Users\bozena_kwiatkowska\web_app\tests\Controller\UserControllerTest.php:51
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="App\Tests\SimpleTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\SimpleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.009469">
+      <testcase name="testOnePlusOneEqualsTwo" class="App\Tests\SimpleTest" classname="App.Tests.SimpleTest" file="C:\Users\bozena_kwiatkowska\web_app\tests\SimpleTest.php" line="13" assertions="1" time="0.009469"/>
     </testsuite>
   </testsuite>
 </testsuites>

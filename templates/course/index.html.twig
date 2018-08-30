@@ -29,6 +29,8 @@
                 {% if is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') %}
                     <a href="{{ path('course_show', {'id': course.id}) }}">show</a>
                     <a href="{{ path('course_edit', {'id': course.id}) }}">edit</a>
+
+
                 {% else %}
                     <a class="btn" href="{{ path('basket_add', { 'id': course.id }) }}" >Add to basket</a>
                 {% endif %}
@@ -40,6 +42,11 @@
                 <td colspan="6">no records found</td>
             </tr>
         {% endfor %}
+
+        {% if is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_ADMIN') %}
+        <button class="btn">
+            <a href="{{ path('course_new') }}">Create new</a></button>
+        {% endif %}
         </tbody>
     </table>
     <button class="btn">

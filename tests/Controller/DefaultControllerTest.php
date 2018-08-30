@@ -5,6 +5,7 @@
 
 namespace App\Tests\Controller;
 
+use App\DataFixtures\AppFixtures;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -75,6 +76,27 @@ class DefaultControllerTest extends WebTestCase
         // Act
         $this->assertContains(
             $expectedContentLowercase, $resultContentLowercase);
+
+    }
+
+    /**
+     * @dataProvider provideUrls
+     */
+    public function testPageIsSuccessfulDataProvider($url)
+    {
+        $client = self::createClient();
+        $client->request('GET', $url);
+
+        $this->assertTrue($client->getResponse()->isSuccessful());
+    }
+
+    public function provideUrls()
+    {       //This code checks that all the given URLs load successfully
+            yield ['/'];
+            yield ['/login'];
+            yield ['/course/new'];
+            yield ['/user/new'];
+
 
     }
 

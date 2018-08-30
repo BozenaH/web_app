@@ -11,7 +11,7 @@
 
     {# we need to add hidden token csrf secure it when we use form_row #}
     {{ form_widget(form._token) }}
-<button type="submit" class="btn">{{ button_label|default('Save') }}</button>
+<button type="submit" class="btn" name="Save">{{ button_label|default('Save') }}</button>
 
 {# we need to switch off render for the remaining fields of the form - render_rest:false #}
 {{ form_end(form, {'render_rest': false}) }}

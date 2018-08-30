@@ -269,7 +269,7 @@ class User implements UserInterface, \Serializable
 
     /**
      * special method
-     *
+     * @see \Serializable::serialize()
      */
     public function serialize()
     {
@@ -283,7 +283,7 @@ class User implements UserInterface, \Serializable
 
     /**
      * special method for converting to byte-stream
-     *
+     * @param string $serialized
      */
     public function unserialize($serialized)
     {

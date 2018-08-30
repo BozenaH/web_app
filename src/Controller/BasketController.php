@@ -1,4 +1,7 @@
 <?php
+/**
+ * This file is used to manage routes associated with basket
+ */
 
 namespace App\Controller;
 
@@ -11,11 +14,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 /**
+ * class that controls any routes associated with the BasketController
  * @Route("/basket")
  */
 class BasketController extends Controller
 {
     /**
+     * function that checks if user is logged in when buying the course and directs to the basket index
      * @Route("/", name="basket_index")
      *
      */
@@ -31,6 +36,7 @@ class BasketController extends Controller
         ]);
     }
     /**
+     * method to enable to clear basket
      * @Route("/clear", name="basket_clear")
      */
     public function clearAction()
@@ -42,14 +48,14 @@ class BasketController extends Controller
 
     }
     /**
-    * @Route("/add/{id}", name="basket_add")
+     * function that holds actions for adding courses to the cart
+     * @Route("/add/{id}", name="basket_add")
      *
     */
 
     public function addToBasket(Course $course)
     {
-
-            // default - new empty array
+        // default - new empty array
         $courses =[];
 
         // if 'products' array in session, retrieve and store
@@ -71,6 +77,7 @@ class BasketController extends Controller
     }
 
     /**
+     * method to control buying a course
      * @Route("/buy", name="basket_buy")
      */
     public function buy()
@@ -95,7 +102,7 @@ class BasketController extends Controller
             }
             // here we check if the user can afford to buy the course
             if ($user->getCreditBalance() < 0) {
-                $error = 'To low credit to buy this course';
+                $error = 'TO LOW CREDIT TO BUY THIS COURSE';
             }
             //if there is no error
             if ($error == null) {
@@ -122,6 +129,7 @@ class BasketController extends Controller
 
 
     /**
+     * functions that contains actions for deleting courses from the basket
      * @Route("/delete/{id}", name="basket_delete")
      */
 

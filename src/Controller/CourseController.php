@@ -1,9 +1,9 @@
 <?php
-
 /**
- *
  * This file is used to manage routes associated with course entity
  */
+
+
 namespace App\Controller;
 
 use App\Entity\Course;
@@ -67,7 +67,7 @@ class CourseController extends Controller
             $em->persist($course);
             $em->flush();
 
-            return $this->redirectToRoute('course_list');
+            return $this->redirectToRoute('course_index');
         }
 
         return $this->render('course/new.html.twig', [
@@ -142,7 +142,7 @@ class CourseController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('course_list');
+        return $this->redirectToRoute('course_index');
     }
 
 }

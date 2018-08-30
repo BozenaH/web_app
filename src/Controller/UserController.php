@@ -1,9 +1,8 @@
 <?php
-
 /**
- *
  * This file is used to manage routes associated with user entity
  */
+
 namespace App\Controller;
 
 use App\Entity\User;

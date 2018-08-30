@@ -1,9 +1,9 @@
 <?php
-
 /**
- *
  * This file is used to manage routes associated with course entity
  */
+
+
 namespace App\Controller;
 
 use App\Entity\Course;
@@ -36,7 +36,10 @@ class CourseController extends Controller
      */
     public function list(CourseRepository $courseRepository): Response
     {
-        return $this->render('course/list.html.twig', ['courses' => $courseRepository->findAll()]);
+        // we only show the courses that the user purchased
+        $coursesIds = $this->getUser()->getPaidCourses();
+        return $this->render('course/list.html.twig', ['courses' => $courseRepository->findById($coursesIds)]);
+
     }
 
     /**
@@ -105,10 +108,10 @@ class CourseController extends Controller
             $file = $course->getImage();
             $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
 
-            // moves the file to the directory where brochures are stored
+            // moves the file to the directory where images are stored
             $file->move($this->getParameter('image_directory'), $fileName);
             $course->setImage(
-              new File($this->getParameter($course->getImage()))
+              $course->getImage()
             );
             $course->setImage($fileName);
             $em = $this->getDoctrine()->getManager();
@@ -117,7 +120,7 @@ class CourseController extends Controller
 
 
 
-            return $this->redirectToRoute('course_edit', ['id' => $course->getId()]);
+            return $this->redirectToRoute('course_index');
         }
 
         return $this->render('course/edit.html.twig', [
